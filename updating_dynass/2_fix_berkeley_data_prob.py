@@ -1,4 +1,4 @@
-#strangely, berkeley assignee names are in the "residence" colum when "name_last" == "organization". So I need to fix this problem. 
+#strangely, berkeley assignee names are in the "residence" colum when "name_last" == "organization". Need to fix this.
 
 import pandas as pd
 
