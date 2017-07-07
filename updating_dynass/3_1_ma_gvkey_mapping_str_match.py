@@ -1,5 +1,5 @@
 '''
-This will map M&A acquirees and acqurers to corresponding GVKEY using CUSIP, Ticker, and company names.
+This will map M&A acquirees and acqurers to their GVKEY's using CUSIP, Ticker, and company names.
 input : M&A data, GVKEY data
 output: string match result file
 '''
@@ -288,7 +288,7 @@ if count == 0:
 	print "There is no Null or nan names"
 #No NAN or NULL name
 
-#Make reference data
+#Make references
 
 #step1: make a dictionary containing matched gvkeys
 matched_gvkeys = pd.unique(gvkey_target.tolist()+gvkey_acquirer.tolist())
@@ -309,7 +309,7 @@ for i in range(len(gvkey_ref)):
 		begyear.append(begyrs[i])
 		endyear.append(endyrs[i])
 
-#Reference data are prepared
+#Reference data prepared
 
 #Clean data and use JWY distance.
 #Our varialbles: raw_names, cleaned_names, unmatched_compustat_names
