@@ -6,7 +6,6 @@ import pandas as pd
 import re
 
 
-		
 #PLC, co, group, '"', holdings
 
 def quoted_csv_name_clean(input):
@@ -19,14 +18,14 @@ def quoted_csv_name_clean(input):
 			input[i] = re.sub('"', "", assignee)
 			
 
-#strips whitespace 
+#remove whitespaces 
 def strip_list(input):
 	assert type(input) is list
 	for i in range(len(input)):
 		input[i] = str(input[i])
 		input[i] = input[i].strip()
 
-#makes N.A. to nan for consistency 
+#convert "N.A." to "nan". 
 def make_na_to_nan(input):
 	assert type(input) is list
 	for i in range(len(input)):
